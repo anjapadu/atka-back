@@ -35,9 +35,15 @@ public class AccesosRestController {
   }
 
   @PostMapping
+  public ResponseEntity<Acceso> createAcceso(@RequestBody Acceso newAcceso) {
+    Acceso result =  service.createAcceso(newAcceso);
+    return new ResponseEntity<Acceso> (result, HttpStatus.OK);
+  }
+  
+  @PostMapping("/validate")
   public ResponseEntity<Object> validateAcceso(@RequestBody Acceso acceso) {
     boolean result = service.validateAcceso(acceso);
-    return result ? new ResponseEntity<>(HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    return result==true ? new ResponseEntity<Object>(HttpStatus.OK) : new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
   }
 
   @PostMapping("/{accesoCorreo}")
