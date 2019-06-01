@@ -5,7 +5,7 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'adopciones', views.AdopcionesViewSet)
-router.register(r'animales', views.AdopcionesViewSet)
+router.register(r'animales', views.AnimalesViewSet)
 
 
 urlpatterns = [
