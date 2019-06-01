@@ -2,11 +2,12 @@ com\sourcecodeerror\repo\IAnimalesRepo.class
 com\sourcecodeerror\service\AdopcionesServiceImpl.class
 com\sourcecodeerror\swagger\SwaggerConfig.class
 com\sourcecodeerror\model\Acceso.class
-com\sourcecodeerror\repo\IPostsDonaciones.class
 com\sourcecodeerror\model\Persona.class
 com\sourcecodeerror\model\Producto.class
 com\sourcecodeerror\model\Animal.class
 com\sourcecodeerror\restcontroller\AccesosRestController.class
+com\sourcecodeerror\service\PostDonacionesServiceImpl.class
+com\sourcecodeerror\restcontroller\AyudasRestController.class
 com\sourcecodeerror\repo\IAccesosRepo.class
 com\sourcecodeerror\service\IAccesosService.class
 com\sourcecodeerror\model\Organizacion.class
@@ -26,5 +27,8 @@ com\sourcecodeerror\repo\IComprasRepo.class
 com\sourcecodeerror\repo\IPersonasRepo.class
 com\sourcecodeerror\repo\IProductosRepo.class
 com\sourcecodeerror\model\Compra.class
+com\sourcecodeerror\service\IPostsDonacionesService.class
+com\sourcecodeerror\model\Ayuda.class
+com\sourcecodeerror\repo\IPostsDonacionesRepo.class
 com\sourcecodeerror\model\Adopcion.class
 com\sourcecodeerror\model\DetalleCompra.class

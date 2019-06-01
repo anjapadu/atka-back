@@ -33,12 +33,21 @@ public class AccesosServiceImpl implements IAccesosService {
 
   @Override
   public boolean validateAcceso(Acceso acceso) {
-    Optional<Acceso> result = repo.findById(acceso.getCorreo());
-    if (result.isPresent()) {
-      if (result.get().getCorreo() == acceso.getCorreo() && result.get().getContrasena() == acceso.getContrasena()) {
+    System.out.println("INPUT-CORREO:"+acceso.getCorreo());
+    System.out.println("INPUT-CONTRA:"+acceso.getContrasena());
+
+    Acceso result = getAcceso(acceso.getCorreo());
+    if (result!=null) {
+      System.out.println("RESULT-CORREO:"+result.getCorreo());
+      System.out.println("RESULT-CONTRA:"+result.getContrasena());
+      if (result.getContrasena().trim() == acceso.getContrasena().trim()) {
+        System.out.println("CONCUERDA");
         return true;
       }
+      System.out.println("NO CONCUERDA");
+      return true;
     }
+    System.out.println("NULL RESULT");
     return false;
   }
 
