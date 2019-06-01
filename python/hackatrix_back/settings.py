@@ -25,7 +25,7 @@ SECRET_KEY = '6sz8o(@isyyvq(&4p%8*krj@^*m1e62-^ubj5k$9^v))lt)5=i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'hackatrix_back.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'atka_db',
+        'USER': 'atka_user',
+        'PASSWORD': 'atka_password',
+        'HOST': '206.189.226.108',
+        'PORT': '5432',
     }
 }
 

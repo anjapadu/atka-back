@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  backend-python:
+    build: ./python
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./python/:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  backend-spring:
+    build: ./hackatrix-back-spring
+    ports:
+      - "8081:8081"
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - "POSTGRES_PASSWORD=atka_password"
+      - "POSTGRES_USER=atka_user"
+      - "POSTGRES_DB=atka_db"
