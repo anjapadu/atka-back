@@ -3,11 +3,13 @@ package com.sourcecodeerror.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import com.sourcecodeerror.model.Acceso;
 import com.sourcecodeerror.repo.IAccesosRepo;
 
+@Service
 public class AccesosServiceImpl implements IAccesosService {
 
   @Autowired
