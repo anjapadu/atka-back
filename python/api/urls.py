@@ -10,5 +10,6 @@ router.register(r'animales', views.AnimalesViewSet)
 
 urlpatterns = [
     path('foo/', views.hello_world),
+    path('login/', views.login),
     path('', include(router.urls)),
     ]
