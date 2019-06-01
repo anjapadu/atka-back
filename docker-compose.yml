@@ -10,6 +10,10 @@ services:
       - "8000:8000"
     depends_on:
       - db
+  backend-spring:
+    build: ./hackatrix-back-spring
+    ports:
+      - "8081:8081"
   db:
     image: postgres
     restart: always
